@@ -33,7 +33,7 @@ http://www.templatemo.com/preview/templatemo_421_raleway
 							<li><a class="show-2 aboutbutton" href="#">About Us</a></li>
 							<li><a id="services" class="show-3 projectbutton" href="#">Jobs/Services</a></li>
 							<li><a class="show-4 blogbutton" href="#">Partners</a></li>
-							<li><a class="show-5 contactbutton" href="#">Contact</a></li>
+							<li><a id="contactus" class="show-5 contactbutton" href="#">Contact</a></li>
 						</ul>
 					</nav>
 					<nav class="main-navigation menu-responsive hidden-md hidden-lg">
@@ -42,7 +42,7 @@ http://www.templatemo.com/preview/templatemo_421_raleway
 							<li><a class="show-2 aboutbutton" href="#">About Us</a></li>
 							<li><a id="services" class="show-3 projectbutton" href="#">Jobs/Services</a></li>
 							<li><a class="show-4 blogbutton" href="#">Partners</a></li>
-							<li><a class="show-5 contactbutton" href="#">Contact</a></li>
+							<li><a id="contactus" class="show-5 contactbutton" href="#">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -98,7 +98,7 @@ http://www.templatemo.com/preview/templatemo_421_raleway
 								<div class="project-item three animated fadeInRight">
 									<img src="img/3.png" alt="">
 									<div class="overlay">
-										<h4><a href="#">Calculator Website</a></h4>
+										<h4><a href="https://github.com/oshit0/html_calculator">Calculator Website</a></h4>
 									</div>
 								</div>
 							</div>
@@ -258,7 +258,11 @@ http://www.templatemo.com/preview/templatemo_421_raleway
 							<h3><a href="#">Software</a></h3>
 							<span class="solid-line"></span>
 							<p>We offer a spectrum of software development services, ranging from web development to backend bare-metal C. Our team is equipped to deliver solutions that align with your unique needs and aspirations.</p>
-							<a href="#" class="post-button">Avail Service</a>
+							<ul class="main-menu">
+								<li>
+									<a href="#" id="software" class="avail-button">Avail Service</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -269,7 +273,11 @@ http://www.templatemo.com/preview/templatemo_421_raleway
 							<h3><a href="#">Hardware</a></h3>
 							<span class="solid-line"></span>
 							<p>We provide hardware services from circuitry design to embedded systems, bringing your technological visions to life by offering tailored solutions to meet the demands of the modern era.</p>
-							<a href="#" class="post-button">Avail Service</a>
+							<ul class="main-menu">
+								<li>
+									<a href="#" id="hardware" class="avail-button">Avail Service</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -280,7 +288,11 @@ http://www.templatemo.com/preview/templatemo_421_raleway
 							<h3><a href="#">Networking</a></h3>
 							<span class="solid-line"></span>
 							<p>We also specialize in providing networking and cybersecurity services, ensuring you are connected and secure in the modern era of technology.<br><br></p>
-							<a href="#" class="post-button">Avail Service</a>
+							<ul class="main-menu">
+								<li>
+									<a href="#" id="networking" class="avail-button">Avail Service</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -302,7 +314,8 @@ http://www.templatemo.com/preview/templatemo_421_raleway
 				<div class="row">
 					<div class="col-md-6 col-sm-12">
 			            <div class="googlemap-wrapper animated fadeInLeft">
-                            <div id="map_canvas" class="map-canvas"></div>
+                            <!-- <div id="map_canvas" class="map-canvas"></div> -->
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.9722229689996!2d121.00504546112866!3d14.600546955560205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9e42d5f7275%3A0x569eb3406c633fbe!2sPolytechnic%20University%20of%20the%20Philippines%20-%20Institute%20of%20Technology!5e0!3m2!1sen!2sph!4v1705855392421!5m2!1sen!2sph" width="100%" height="510px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
 					</div>
 					<div class="col-md-6 col-sm-12">
@@ -316,7 +329,7 @@ http://www.templatemo.com/preview/templatemo_421_raleway
 									<input type="email" name="email" placeholder="Your name">
 								</fieldset>
 								<fieldset class="col-md-12">
-									<input type="text" name="subject" id="subject" placeholder="Subject">
+									<input type="text" name="subject" id="subject" placeholder="Subject" value="">
 								</fieldset>
 								<fieldset class="col-md-12">
 									<textarea name="message" id="message" cols="30" rows="10" placeholder="Describe your Project"></textarea>

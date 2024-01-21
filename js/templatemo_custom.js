@@ -1,18 +1,21 @@
 jQuery(document).ready(function($) {
+	var jobs_button = document.getElementById("services");
+	var contact_button = document.getElementById("contactus");
+	var subject_box = document.getElementById("subject");
 
 	$(".main-menu a").click(function(){
 		var id =  $(this).attr('class');
 		id = id.split('-');
 		$('a.active').removeClass('active');
     	$(this).addClass('active');
-		var jobs_button = document.getElementById("services");
 		jobs_button.style.backgroundColor = "";
+		contact_button.style.backgroundColor = "";
+		subject_box.value = "";
 		$("#menu-container .content").slideUp('slow');
 		$("#menu-container #menu-"+id[1]).slideDown('slow');		
 		$("#menu-container .homepage").slideUp('slow');
 		return false;
 	});
-
 
 	$(".main-menu a.homebutton").click(function(){
 		$("#menu-container .content").slideUp('slow');
@@ -40,6 +43,39 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
+	function which_avail_button(clicked_id){
+		var subject = "";
+		switch(clicked_id){
+			case "ILOVEYOUUUUUUUUUUUU":
+				subject = "100000000000000%";
+				break;
+			case "software":
+				subject = "Software";
+				break;
+			case "hardware":
+				subject = "Hardware";
+				break;
+			case "networking":
+				subject = "Networking";
+				break;
+		}
+		console.log("MAHAL KITAAA!!!!");
+		return subject;
+	}
+
+	function set_subj_txt(subject){
+		subject_box.value = subject;
+	}
+
+	$(".main-menu a.avail-button").click(function(){	
+		set_subj_txt(which_avail_button(this.id));
+		contact_button.style.backgroundColor = "#4e91c9";
+		$("#menu-container .content").fadeOut();
+		$("#menu-container .contact-section").slideDown('slow');
+		//loadScript();
+		return false;
+	});
+
 	$(".main-menu a.blogbutton").click(function(){
 		$("#menu-container .content").slideUp('slow');
 		$("#menu-container .project-section").slideDown('slow');
@@ -49,7 +85,7 @@ jQuery(document).ready(function($) {
 	$(".main-menu a.contactbutton").click(function(){
 		$("#menu-container .content").fadeOut();
 		$("#menu-container .contact-section").slideDown('slow');
-		loadScript();
+		//loadScript();
 		return false;
 	});
 
@@ -62,8 +98,6 @@ jQuery(document).ready(function($) {
 	$('.menu-responsive a').click(function() {
 		$('.menu-responsive').slideToggle().hide();
 	});
-
-
 
 
 });
